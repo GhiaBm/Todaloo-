@@ -1,0 +1,63 @@
+main {
+  width: 80%;
+  margin: 15px auto 0;
+}
+
+#NotesForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "name name"
+    "age roll"
+    "button button";
+}
+
+#NotesForm * {
+  margin: 7px;
+  padding: 7px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+#NotesForm button {
+  outline: none;
+  background-color: #008374;
+  color: white;
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+#NotesForm input {
+  border: 3px solid #008374;
+  outline: none;
+}
+
+#NotesForm input:focus {
+  border: 3px solid #008374;
+}
+
+#NotesForm button:active {
+  border-color: #008374;
+}
+
+.Notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #f54024;
+  background-color: #f85a40;
+  color: #2f2f2f;
+  border-radius: 15px;
+}
+
+.Notes div {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.Notes div * {
+  margin: 5px;
+}

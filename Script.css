@@ -1,0 +1,146 @@
+/*breathing app */
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.input label {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.input select {
+  border: none;
+  border-radius: 8px;
+  min-width: 100px;
+  font-size: 20px;
+  padding: 8px 4px;
+  background-color: #f85a40;
+  color: #fff;
+}
+
+.input select:focus {
+  outline: none;
+}
+.circle-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -20%;
+  margin-bottom: 10px;
+}
+
+.circle-outline {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 15px solid #008374;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.circle-progress {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #f85a40;
+  border-radius: 50%;
+  transition: 4s ease all;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.circle-grow {
+  transform: scale(5.3);
+}
+
+.breaths {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.instructions {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+button {
+  padding: 8px 20px;
+  border-radius: 8px;
+  background-color: #f85a40;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+button:hover {
+  background-color: #008374;
+  color: #f85a40;
+}
+
+.button-inactive {
+  pointer-events: none;
+  background-color: #008374;
+}
+/*end of the breathing app*/
+
+/*flipping button*/
+
+.btn-flip {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+}
+.btn-flip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.btn-flip:hover:before {
+  opacity: 0;
+  transform: translateY(-50%) rotateX(-90deg);
+}
+.btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: #f4f2f3;
+  display: block;
+  transition: 0.5s;
+  position: absolute;
+  background: #008374;
+  content: attr(data-front);
+  transform: translateY(50%) rotateX(-90deg);
+}
+.btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #f4f2f3;
+  display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  transition: 0.5s;
+  position: relative;
+  background: #008374;
+  content: attr(data-back);
+  transform: translateY(0) rotateX(0);
+}
+/*end of the flipping button*/
